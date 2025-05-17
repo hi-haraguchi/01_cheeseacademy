@@ -1,0 +1,732 @@
+/* ここから下に記載していく */
+body{
+    width: 100%;  
+    margin :130px auto;
+}
+
+.header_container {
+    position: fixed;
+    top: 0; /* 画面の一番上に配置 */
+    left: auto;
+    width: 100%;
+    background-color: white; /* 背景色 */
+    z-index: 1000; /* 他の要素の前面に表示 */
+}
+
+
+.header{
+    display: flex;
+    border-bottom:1px solid #cacaca ;
+}
+
+
+.header_left{
+    display: flex;
+    align-items: center;
+    width:50%
+}
+
+.header_right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:50%  
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #222222;
+    font-size: 21px;
+    margin: 50px 50px 50px 0;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 150px;
+}
+
+@media (max-width: 1100px) { 
+ 
+    
+    .header {
+      flex-direction: column; /* 縦方向に変更 */
+      align-items: center; /* 中央揃え */
+    }
+
+    .header_left{
+        display: flex;
+        align-items: center;
+    }
+
+    .header_right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 20px 20px;
+    }
+
+    html {
+        scroll-padding: 180px;
+    }
+
+  }
+
+
+#titlebox{
+    background: url(../img/mainbg.png);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titlebox_h1{
+    font-size: 42px;
+    margin: 0;
+}
+
+.titlebox_p{
+    font-size: 32px;
+    margin: 30px 0 0 0;
+    font-family: Yu Gothic;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 60px 0 80px 0;
+}
+
+#nav_about{
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    color: #ffd61a;
+    font-weight: bold;
+}
+
+.about_h2{
+    font-size: 18px;
+    margin: 15px 0 30px 0;
+}
+
+.about_p1{
+    font-size: 16px;
+    margin: 30px 0 30px 0;
+}
+.about_p2{
+    font-size: 16px;
+    margin: 5px 0 5px 0;
+}  
+.about_p3{
+    font-size: 16px;
+    margin: 5px 0 20px 0;
+}
+.about_p4{
+    font-size: 16px;
+    margin: 20px 0 20px 0;
+}
+.about_p5{
+    font-size: 16px;
+    margin: 20px 0 5px 0;
+}
+.about_p6{
+    font-size: 16px;
+    margin: 5px 0 0 0;
+}
+
+/* ここからスライドショー */
+
+.slideshow_outer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    overflow: hidden; /* はみ出たスライドを隠す */
+}
+
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    animation: scroll-left 60s infinite linear .5s both;
+}
+
+.slide {
+    width: calc(100vw / 4); /* 4はスライドの枚数 */
+  }
+
+  .slide img {
+    display: block;
+    width: 100%;
+  }
+
+  @keyframes scroll-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .slideshow_outer:hover .slideshow-container {
+    animation-play-state: paused;
+  }
+
+
+/* ここからCourse */
+
+
+
+.course{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 60px 0 60px 0;
+}
+
+#nav_course{
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    color: #ffd61a;
+    font-weight: bold;
+}
+
+.course_p1{
+    font-size: 16px;
+    margin: 30px 0 10px 0;
+}
+.course_p2{
+    font-size: 16px;
+    margin: 10px 0 0 0;
+}
+
+.course_detail_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+
+.course_detail{
+    display: flex;
+}
+
+.course_img_outer{order: 1;}
+.course_text{order: 2;}
+
+.course_detail2{
+    display: flex;
+}
+
+
+.course_img{
+    width: 600px;
+    display: block;
+}
+
+.course_text{
+    width: 600px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.course_text2{
+    width: 600px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.course_text_inner{
+    width: 435px;
+    margin-left: 50px;
+}
+
+.course_text_inner2{
+    margin-right: 50px;
+}
+
+
+@media (max-width: 1100px) { 
+
+    .course_img_outer{order: 2;}
+    .course_text{order: 1;}
+
+ 
+    .course_detail{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .course_detail2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course_text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .course_text2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .course_text_inner{
+        margin: 20px 0 20px 0;
+    }
+
+    .course_text_inner2{
+        margin: 20px 0 20px 0;
+    }
+    
+}
+
+
+
+.course_text_innerh2{
+    font-size: 24px;
+    margin: 0 0 40px 0;
+    font-weight: bold;
+}
+
+.course_text_p{
+    font-size: 16px;
+    margin: 0 0 16px 0;
+}
+
+
+.news_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 60px 0 60px 0;
+}
+
+#nav_news{
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    color: #ffd61a;
+    font-weight: bold;
+}
+
+.news_p1{
+    font-size: 18px;
+    margin: 15px 0 0 0;
+}
+
+.news_detail{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 30px;
+}
+
+@media (max-width: 1100px) { 
+
+    .news_detail{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .news_detail_inner{
+        margin: 20px 0 20px 0;
+    }
+    
+}
+
+
+.news_detail_inner{
+    width: 300px;
+}
+
+
+.news_detail_inner:hover{
+    opacity: 0.5;
+}
+
+
+.news_img{
+    width: 300px;
+    display: block;
+}
+
+.news_h2{
+    font-size: 16px;
+    margin: 30px 0 14px 0;
+}
+
+.news_p{
+    font-size: 14px;
+    margin: 10px 0 0 0;
+}
+
+
+
+.button_more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0 60px 0;
+}
+
+.button_inner{    
+
+    width: 300px;
+    height: 60px;
+    background-color: #ffd61a;
+    color: white;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    
+}
+
+.button_inner:hover {
+    background: white;
+    color: #ffd61a;
+    border: 2px solid #ffd61a;
+  }
+
+
+.access1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fafafa;
+}
+
+#nav_access{
+    font-size: 24px;
+    margin: 60px 0 15px 0;
+    color: #ffd61a;
+    font-weight: bold;
+}
+
+.access1_h2{
+    font-size: 18px;
+    margin: 15px 0 60px 0;
+}
+
+.access2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.access3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.access3_left{
+   margin :0 50px 0 50px;
+}
+
+.access3_1{
+    margin :60px 0 15px 0;
+}
+
+.access3_234{
+    margin :15px 0 15px 0;
+}
+
+.access3_5{
+    margin :15px 0 60px 0;
+}
+
+
+
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#nav_contact{
+    margin: 60px 0 15px 0;
+    font-size: 24px;
+    color: #ffd61a;
+    font-weight: bold;
+}
+
+.contact_h2{
+    margin: 15px 0 30px 0;
+    font-size: 18px;
+}
+
+.contact_p11{
+    margin: 30px 0 10px 0;
+}
+
+.contact_p12{
+    margin: 0 0 15px 0;
+}
+
+.contact_p21{
+    margin: 15px 0 10px 0;
+}
+
+.contact_p22{
+    margin: 0 0 70px 0;
+}
+
+
+
+/* フォーム自体を中央に持ってくる */
+.form_outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* フォームの各行を左ぞろえにするため親？で指定 */
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom:1px solid #cacaca ;
+    
+}
+
+/*フォームの各行をくくるdiv、ラベルと入力を横並び */
+.form_group{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    border-top: 1px solid #cacaca;
+  
+}
+
+
+.form_left{
+    text-align: left;
+    margin-left: 16px;
+    width : 300px;
+}
+
+
+.form_right{
+    text-align: left;
+    width : 450px;
+    height:54px;
+    border-left: 1px solid #cacaca;
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* 高さの広い「詳細」の大枠用 */
+.form_right2{
+    text-align: left;
+    width : 450px;
+    height:120px;
+    border-left: 1px solid #cacaca;
+    display: flex;
+    align-items: center;
+}
+
+
+/* チェックボックスの大枠の大きさを指定 */
+.form_right_checkbox{
+    text-align: left;
+    width : 450px;
+    height:190px;
+    border-left: 1px solid #cacaca;
+    display: flex;
+    align-items: center;
+}
+
+/* 入力欄の大きさを指定 */
+.form_right_box{
+    width: 328px;
+    height: 28px;
+    margin: 8px 0 8px 8px;
+    border: 2px solid #cacaca;
+    
+}
+
+/* 高さの大きい「詳細」の入力欄の大きさを指定 */
+.form_right_box2{
+    width: 328px;
+    height: 100px;
+    margin: 8px 0 8px 8px;
+    border: 2px solid #cacaca;
+}
+
+/* セレクトボックス自体の大きさなどを指定 */
+.select{
+    width: 336px;
+    height: 30px;
+    margin: 8px 0 8px 8px;
+    appearance: none;
+    border: 2px solid #cacaca;
+}
+
+.form_right_select{
+    text-align: left;
+    width : 450px;
+    height:54px;
+    border-left: 1px solid #cacaca;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.form_right_select::after{
+    content: '<>';
+  font: 17px "Consolas", monospace;
+  color: #333;
+  transform: rotate(90deg);
+  right: 110px;
+  position: absolute;
+  pointer-events: none;
+   
+}
+
+
+
+
+/* チェックボックスの各項目を縦に並べて、左ぞろえ */
+.checkbox_outer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+    margin: 8px 0 8px 8px;
+}
+
+.checkbox2{
+    margin: 30px 0 0 0;
+}
+
+
+/* チェックボックスのスタイルを調整 */
+.checkboxmark{
+    appearance: none; /* デフォルトスタイルを削除 */
+    margin: 0;
+    margin-right: 18px;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    border-radius: 3px;
+    background-color: rgb(239, 236, 236);
+}
+
+.checkboxmark:checked{
+    background-color: rgb(41, 131, 234);
+}
+
+
+
+@media (max-width: 1100px) { 
+
+    .form_group{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+    }
+
+    .form_right{
+        border-left: 0px solid #cacaca;
+        margin-top: 8px;
+        margin-left: 20px;
+    }
+
+    .form_right2{
+        border-left: 0px solid #cacaca;
+        margin-top: 8px;
+        margin-left: 20px;
+    }
+
+    .form_right_select{
+        border-left: 0px solid #cacaca;
+        margin-top: 8px;
+        margin-left: 20px;
+    }
+
+    .form_right_checkbox{
+        border-left: 0px solid #cacaca;
+        margin-top: 8px;
+        margin-left: 20px;
+    }
+
+    .form_group{
+        padding-top: 15px;
+        border-top: 0px solid #cacaca;
+    }
+
+    .form{
+        border-bottom:0px solid #cacaca;
+        margin-left: 90px;
+    }
+
+    .form_left{
+        padding-left: 8px;
+        border-left:12px solid gray;
+    }
+
+
+}
+
+
+
+.button_send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 140px 0;
+}
+
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #707070;
+}
+
+.footer_h2{
+    color: white;
+    margin: 30px 0 30px 0;
+}
